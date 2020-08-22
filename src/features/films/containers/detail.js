@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, FlatList, TouchableWithoutFeedback, View, Text, Image } from 'react-native';
+import { SafeAreaView, ScrollView, TouchableWithoutFeedback, View, Text, Image } from 'react-native';
 import Axios from 'axios';
 
 import { FILMS, PEOPLE, BASE_URL_IMG, BASE_URL_IMG_PROF } from '~/api/constants';
@@ -42,7 +42,7 @@ function FilmDetail({ route, navigation }) {
           />
         </View>
         <View style={styles.cardCharacterLabel}>
-          <Text ellipsizeMode="tail" numberOfLines={1} style={{ fontWeight: 'bold', fontSize: metrics.regularRS }}>{item.name}</Text>
+          <Text ellipsizeMode="tail" numberOfLines={1} style={styles.headTitle}>{item.name}</Text>
           <Text>{item.gender != 'n/a' ? `${item.gender}, ` : null}{item.hair_color != 'n/a' ? `${item.hair_color}, ` : null}{item.skin_color} skin, {item.eye_color} eye color</Text>
           <View style={{ flexDirection: 'row' }}>
             <Text ellipsizeMode="tail" numberOfLines={1}>{item.height} cm</Text>
@@ -59,7 +59,7 @@ function FilmDetail({ route, navigation }) {
         <ScrollView>
           <Image source={{ uri: `${BASE_URL_IMG}/500/400` }} style={{ height: metrics.getResponsiveSize(30) }} />
           <View style={{ position: 'absolute', flexDirection: 'row' }}>
-            <View size={50} style={{ left: metrics.regularRS, top: metrics.smallRS }}>
+            <View size={50} style={styles.headerBackBtn}>
               <TouchableWithoutFeedback onPress={() => navigation.goBack()}>
                 <Text style={{ fontSize: metrics.regularRS, color: 'white' }}>{'<  Back'}</Text>
               </TouchableWithoutFeedback>
@@ -72,7 +72,7 @@ function FilmDetail({ route, navigation }) {
             <Text>Producer : {film.producer}</Text>
             <Text>Director   : {film.director}</Text>
 
-            <Text style={[styles.headerText, { marginTop: metrics.extraSmallRS, fontSize: metrics.regularRS }]}>Synopsis</Text>
+            <Text style={[styles.headerText, styles.header2Text]}>Synopsis</Text>
             <Text>{film.opening_crawl}</Text>
           </View>
 

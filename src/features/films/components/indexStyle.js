@@ -17,6 +17,18 @@ const styles = StyleSheet.create({
     color: '#333',
     marginBottom: metrics.extraSmallRS,
   },
+  header2Text: {
+    marginTop: metrics.extraSmallRS,
+    fontSize: metrics.regularRS,
+  },
+  headTitle: {
+    fontWeight: 'bold',
+    fontSize: metrics.regularRS,
+  },
+  headerBackBtn: {
+    left: metrics.regularRS,
+    top: metrics.smallRS,
+  },
   cardFilm: {
     height: metrics.getResponsiveSize(15),
     width: metrics.getResponsiveSize(20),

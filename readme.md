@@ -6,7 +6,7 @@ Simple mobile app about Star Wars fans using [swapi API](https://swapi.dev/). De
 
 
 ## Download App (APK file)
-[Download APK here](https://github.com/zakishaquille/StarWarers/blob/master/Star-Warers-1.0.0.apk)
+[Download APK here](https://github.com/zakishaquille/StarWarers/blob/master/Star%20Warers%201.0.0.apk)
 
 
 ## App Screenshots

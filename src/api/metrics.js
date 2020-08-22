@@ -17,13 +17,13 @@ const getResponsiveSize = val => {
 };
 
 export default {
-  borderRadius: 15,
+  borderRadius: getResponsiveSize(1),
 
   extraSmallRS: getResponsiveSize(1),
   smallRS: getResponsiveSize(1.5),
   regularRS: getResponsiveSize(2),
-  largeRS: getResponsiveSize(3),
-  extraLargeRS: getResponsiveSize(4),
+  largeRS: getResponsiveSize(2.5),
+  extraLargeRS: getResponsiveSize(3),
 
   getResponsiveSize,
 

@@ -31,9 +31,9 @@ function Home({ navigation }) {
     });
   };
 
-  const CardFilm = ({ item }) => {
+  const CardFilm = ({ id, item }) => {
     return (
-      <TouchableWithoutFeedback onPress={() => navigation.navigate('FilmDetail', { id: item.episode_id })}>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate('FilmDetail', { id: id })}>
         <View style={[styles.cardFilm, { marginRight: 10 }]}>
           <View style={styles.cardFilmImg}>
             <Image
@@ -84,7 +84,7 @@ function Home({ navigation }) {
             contentContainerStyle={{ marginHorizontal: metrics.regularRS }}
           >
             {listFilm.map((item, i) => (
-              <CardFilm key={i.toString()} item={item} />
+              <CardFilm key={i.toString()} id={++i} item={item} />
             ))}
           </ScrollView>
         </>

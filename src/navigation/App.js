@@ -21,7 +21,7 @@ function App() {
             },
           }}
         >
-          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Star Warers' }}/>
+          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Star Wars' }}/>
           <Stack.Screen name="FilmDetail" component={FilmDetailScreen} options={{
             headerMode: 'none',
             headerShown: false,

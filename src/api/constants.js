@@ -4,11 +4,11 @@ const BASE_URL_IMG_PROF = 'https://picsum.photos';
 
 const FILMS = {
   LIST: `${BASE_URL}/films/`,
+  DETAIL: id => `${BASE_URL}/films/${id}/`,
 };
 
 const PEOPLE = {
   LIST: `${BASE_URL}/people/`,
-  DETAIL: id => `${BASE_URL}/people/${id}/`,
 };
 
 export {

@@ -96,12 +96,14 @@ function Home({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <FlatList
-        keyExtractor={(item, i) => i.toString()}
-        data={listCharacter}
-        renderItem={({ item }) => <CardCharacter item={item} />}
-        ListHeaderComponent={<ListFilm />}
-      />
+      {listCharacter &&
+        <FlatList
+          keyExtractor={(item, i) => i.toString()}
+          data={listCharacter}
+          renderItem={({ item }) => <CardCharacter item={item} />}
+          ListHeaderComponent={<ListFilm />}
+        />
+      }
     </SafeAreaView>
   );
 }
